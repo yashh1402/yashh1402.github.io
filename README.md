@@ -1,2 +1,5 @@
-# This is the link to my sample website
-# https://yashh1402.github.io/
+# Yash Hemnani — Portfolio
+
+https://yashh1402.github.io/
+
+Static HTML/CSS, no build step. Edit index.html and css/style.css.
