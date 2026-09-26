@@ -15,6 +15,9 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='system-ui,sans-serif' font-size='28' font-weight='700' fill='%2338bdf8' text-anchor='middle'%3EYH%3C/text%3E%3C/svg%3E" />
 
 <link rel="stylesheet" href="css/style.css" />
+<script>
+try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}
+</script>
 </head>
 <body>
 
@@ -27,12 +30,16 @@
       <li><a href="#open-source">Open Source</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 5a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1Zm0 16a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1ZM4 13H2a1 1 0 1 1 0-2h2a1 1 0 1 1 0 2Zm18 0h-2a1 1 0 1 1 0-2h2a1 1 0 1 1 0 2ZM5.64 6.34l-1.4-1.4a1 1 0 0 1 1.42-1.42l1.4 1.42a1 1 0 1 1-1.42 1.4Zm12.72 12.72-1.4-1.4a1 1 0 0 1 1.42-1.42l1.4 1.4a1 1 0 0 1-1.42 1.42ZM18.36 6.34a1 1 0 0 1-1.42-1.4l1.4-1.42a1 1 0 1 1 1.42 1.42l-1.4 1.4ZM5.64 17.66a1 1 0 0 1 1.42 1.4l-1.4 1.42a1 1 0 0 1-1.42-1.42l1.4-1.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.742 13.045a8.5 8.5 0 0 1-10.787-10.787.75.75 0 0 0-.933-.933 10 10 0 1 0 12.653 12.653.75.75 0 0 0-.933-.933Z"/></svg>
+    </button>
   </nav>
 </header>
 
 <main>
   <section id="top" class="hero">
-    <img class="avatar" src="img/avatar.jpg" alt="Yash Hemnani" width="140" height="140" />
+    <img class="avatar" src="img/avatar.jpg" alt="Yash Hemnani" width="88" height="88" />
     <h1>Yash Hemnani</h1>
     <p class="subtitle">Senior Backend &amp; Platform Engineer &middot; AI Developer Platforms</p>
     <p class="location">Bengaluru, India</p>
@@ -43,24 +50,12 @@
       architecture, cost optimization, and shipping LLM features to production.
     </p>
 
-    <div class="actions">
-      <a class="btn btn-primary" href="resume.pdf" download>
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Zm-7 15a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/></svg>
-        Download Resume
-      </a>
-      <a class="btn" href="https://linkedin.com/in/yash-hemnani" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M6.94 8.5H3.56V20H6.94V8.5ZM5.25 7a1.95 1.95 0 1 0 0-3.9 1.95 1.95 0 0 0 0 3.9ZM20.44 20h-3.38v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V20H9.65V8.5h3.24v1.57h.05c.45-.86 1.56-1.77 3.21-1.77 3.43 0 4.06 2.26 4.06 5.2V20Z"/></svg>
-        LinkedIn
-      </a>
-      <a class="btn" href="https://github.com/yashh1402" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.4.1 2.65.65.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
-        GitHub
-      </a>
-      <a class="btn" href="mailto:yashh.1402@gmail.com">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm15.4 2H4.6l7.4 6.2L19.4 6ZM4 8.3V18h16V8.3l-7.6 6.4a1 1 0 0 1-1.28 0L4 8.3Z"/></svg>
-        Email
-      </a>
-    </div>
+    <p class="text-links">
+      <a href="resume.pdf" download>Download Resume <span aria-hidden="true">&darr;</span></a>
+      <a href="https://linkedin.com/in/yash-hemnani" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">&nearr;</span></a>
+      <a href="https://github.com/yashh1402" target="_blank" rel="noopener">GitHub <span aria-hidden="true">&nearr;</span></a>
+      <a href="mailto:yashh.1402@gmail.com">Email</a>
+    </p>
   </section>
 
   <section class="highlights" aria-label="Career highlights">
@@ -87,105 +82,98 @@
   <section id="experience" class="section">
     <h2>Experience</h2>
 
-    <article class="job">
-      <div class="job-head">
-        <h3>Senior Engineer — Platform &amp; AI</h3>
-        <span class="job-dates">May 2025 – Present</span>
-      </div>
-      <p class="job-meta">Alaan (Series A fintech, UAE) &middot; Bengaluru</p>
-      <p class="job-intro"><em>Platform team owning developer experience, notification infra and AI tooling across a 90+ repo, 30+ service fleet.</em></p>
-      <ul>
-        <li><strong>Built the org's AI developer platform:</strong> 10+ plugin packs (skills, agents, hooks) for Claude Code/Codex, distributed to every service repo via automated config-sync. Includes AI code review in CI, PM/Tech-Lead persona agents, and a dev-flow orchestrator (plan &rarr; review &rarr; ticket &rarr; branch &rarr; PR). Added token-budget linting to cap always-on context cost per repo.</li>
-        <li><strong>Led org-wide AI consolidation:</strong> audited overlapping AI tooling across 90+ repos and defined a single source of truth per plane (model access, agent execution, config distribution, registry). Designed a LiteLLM gateway for centralized dev/CI model access with per-tenant spend tracking.</li>
-        <li><strong>Stood up the Internal Developer Platform (Backstage):</strong> fleet scorecard for 30+ repos, CI/CD health and trend views, per-environment deploy state across 10+ ECS clusters and Cloud Run, Grafana/Sentry/on-call surfaced on entity pages.</li>
-        <li><strong>Architected the multi-channel notification platform:</strong> Kafka-based dispatch across email, SMS, WhatsApp, push, IVR and in-app — 2M+ sends and 4M+ provider webhook events per month, 40K+ duplicate webhooks deduplicated. Built template-manager with versioning, recipient-health scoring, and channel-group preference enforcement at the dispatch chokepoint.</li>
-        <li><strong>Drove service modernization (golden path):</strong> migrated legacy services to the org NestJS template — staged Dockerfiles, Jenkins &rarr; GitHub Actions, CODEOWNERS, reverse-merge automation, artifact-contents CI assertions.</li>
-        <li><strong>Security hardening:</strong> surfaced and remediated an unauthenticated cross-tenant financial write path and unauthenticated provider delivery webhooks.</li>
-        <li><strong>Disaster recovery:</strong> on the DR response team during the March 2026 regional incident affecting UAE operations — supported failover to DR environments and continuity of production fintech workloads.</li>
-      </ul>
-    </article>
+    <ul class="timeline">
+      <li class="timeline-item">
+        <div class="timeline-date">May 2025 &ndash; Present</div>
+        <div class="timeline-content">
+          <h3>Senior Engineer &mdash; Platform &amp; AI</h3>
+          <p class="job-meta">Alaan (Series A fintech, UAE) &middot; Bengaluru</p>
+          <p class="job-intro"><em>Platform team owning developer experience, notification infra and AI tooling across a 90+ repo, 30+ service fleet.</em></p>
+          <ul>
+            <li><strong>Built the org's AI developer platform:</strong> 10+ plugin packs (skills, agents, hooks) for Claude Code/Codex, distributed to every service repo via automated config-sync. Includes AI code review in CI, PM/Tech-Lead persona agents, and a dev-flow orchestrator (plan &rarr; review &rarr; ticket &rarr; branch &rarr; PR). Added token-budget linting to cap always-on context cost per repo.</li>
+            <li><strong>Led org-wide AI consolidation:</strong> audited overlapping AI tooling across 90+ repos and defined a single source of truth per plane (model access, agent execution, config distribution, registry). Designed a LiteLLM gateway for centralized dev/CI model access with per-tenant spend tracking.</li>
+            <li><strong>Stood up the Internal Developer Platform (Backstage):</strong> fleet scorecard for 30+ repos, CI/CD health and trend views, per-environment deploy state across 10+ ECS clusters and Cloud Run, Grafana/Sentry/on-call surfaced on entity pages.</li>
+            <li><strong>Architected the multi-channel notification platform:</strong> Kafka-based dispatch across email, SMS, WhatsApp, push, IVR and in-app — 2M+ sends and 4M+ provider webhook events per month, 40K+ duplicate webhooks deduplicated. Built template-manager with versioning, recipient-health scoring, and channel-group preference enforcement at the dispatch chokepoint.</li>
+            <li><strong>Drove service modernization (golden path):</strong> migrated legacy services to the org NestJS template — staged Dockerfiles, Jenkins &rarr; GitHub Actions, CODEOWNERS, reverse-merge automation, artifact-contents CI assertions.</li>
+            <li><strong>Security hardening:</strong> surfaced and remediated an unauthenticated cross-tenant financial write path and unauthenticated provider delivery webhooks.</li>
+            <li><strong>Disaster recovery:</strong> on the DR response team during the March 2026 regional incident affecting UAE operations — supported failover to DR environments and continuity of production fintech workloads.</li>
+          </ul>
+        </div>
+      </li>
 
-    <article class="job">
-      <div class="job-head">
-        <h3>Technology Lead</h3>
-        <span class="job-dates">Sept 2023 – Mar 2025</span>
-      </div>
-      <p class="job-meta">WeCP &middot; Bengaluru</p>
-      <ul>
-        <li>Shipped AI-based candidate evaluation (Node.js + LLM/Whisper APIs), cutting evaluation time 40% and reducing scorer bias.</li>
-        <li>Architected async large-data computation services (Node.js, SQS, ECS, DynamoDB, PostgreSQL, SES), automating 95% of manual exports.</li>
-        <li>Integrated 5+ ATS platforms via APIs to streamline client workflows and accelerate enterprise deal closures.</li>
-      </ul>
-    </article>
+      <li class="timeline-item">
+        <div class="timeline-date">Sept 2023 &ndash; Mar 2025</div>
+        <div class="timeline-content">
+          <h3>Technology Lead</h3>
+          <p class="job-meta">WeCP &middot; Bengaluru</p>
+          <ul>
+            <li>Shipped AI-based candidate evaluation (Node.js + LLM/Whisper APIs), cutting evaluation time 40% and reducing scorer bias.</li>
+            <li>Architected async large-data computation services (Node.js, SQS, ECS, DynamoDB, PostgreSQL, SES), automating 95% of manual exports.</li>
+            <li>Integrated 5+ ATS platforms via APIs to streamline client workflows and accelerate enterprise deal closures.</li>
+          </ul>
+        </div>
+      </li>
 
-    <article class="job">
-      <div class="job-head">
-        <h3>Lead Software Engineer</h3>
-        <span class="job-dates">Mar 2021 – Aug 2023</span>
-      </div>
-      <p class="job-meta">WeCP &middot; Bengaluru</p>
-      <ul>
-        <li>Built automated billing pipeline (Node.js, Lambda, SQS, DynamoDB, Stripe), reducing CSM/Finance manual effort by 80%.</li>
-        <li>Rebuilt image processing as a DeepFace + AWS Rekognition hybrid (Python/Flask), cutting cost 70% and improving throughput.</li>
-      </ul>
-    </article>
+      <li class="timeline-item">
+        <div class="timeline-date">Mar 2021 &ndash; Aug 2023</div>
+        <div class="timeline-content">
+          <h3>Lead Software Engineer</h3>
+          <p class="job-meta">WeCP &middot; Bengaluru</p>
+          <ul>
+            <li>Built automated billing pipeline (Node.js, Lambda, SQS, DynamoDB, Stripe), reducing CSM/Finance manual effort by 80%.</li>
+            <li>Rebuilt image processing as a DeepFace + AWS Rekognition hybrid (Python/Flask), cutting cost 70% and improving throughput.</li>
+          </ul>
+        </div>
+      </li>
 
-    <article class="job">
-      <div class="job-head">
-        <h3>Software Developer &rarr; Senior Software Engineer</h3>
-        <span class="job-dates">Nov 2018 – Feb 2021</span>
-      </div>
-      <p class="job-meta">WeCP &middot; Bengaluru</p>
-      <ul>
-        <li>Core backend development on the assessment platform (Node.js, Angular, AWS), owning features from design to production.</li>
-      </ul>
-    </article>
+      <li class="timeline-item">
+        <div class="timeline-date">Nov 2018 &ndash; Feb 2021</div>
+        <div class="timeline-content">
+          <h3>Software Developer &rarr; Senior Software Engineer</h3>
+          <p class="job-meta">WeCP &middot; Bengaluru</p>
+          <ul>
+            <li>Core backend development on the assessment platform (Node.js, Angular, AWS), owning features from design to production.</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
   </section>
 
   <section id="skills" class="section">
     <h2>Skills</h2>
 
-    <div class="skill-group">
-      <h3>Languages &amp; Frameworks</h3>
-      <ul class="chips">
-        <li>TypeScript</li><li>Node.js</li><li>NestJS</li><li>Python</li>
-      </ul>
+    <div class="skill-row">
+      <div class="skill-label">Languages &amp; Frameworks</div>
+      <div class="skill-list">TypeScript, Node.js, NestJS, Python</div>
     </div>
 
-    <div class="skill-group">
-      <h3>Platform &amp; Infra</h3>
-      <ul class="chips">
-        <li>AWS (ECS, Lambda, VPC, SQS, SES, Cognito)</li><li>Docker</li><li>Kafka</li><li>GitHub Actions</li><li>Backstage</li><li>OpenTelemetry/Grafana</li><li>Sentry</li>
-      </ul>
+    <div class="skill-row">
+      <div class="skill-label">Platform &amp; Infra</div>
+      <div class="skill-list">AWS (ECS, Lambda, VPC, SQS, SES, Cognito), Docker, Kafka, GitHub Actions, Backstage, OpenTelemetry/Grafana, Sentry</div>
     </div>
 
-    <div class="skill-group">
-      <h3>AI Engineering</h3>
-      <ul class="chips">
-        <li>LLM workflow orchestration</li><li>Agent &amp; skill design (Claude Code, Codex)</li><li>AI code review in CI</li><li>Context/token-cost budgeting</li><li>Evals</li><li>Model gateways</li>
-      </ul>
+    <div class="skill-row">
+      <div class="skill-label">AI Engineering</div>
+      <div class="skill-list">LLM workflow orchestration, Agent &amp; skill design (Claude Code, Codex), AI code review in CI, Context/token-cost budgeting, Evals, Model gateways</div>
     </div>
 
-    <div class="skill-group">
-      <h3>Data &amp; Messaging</h3>
-      <ul class="chips">
-        <li>PostgreSQL</li><li>DynamoDB</li><li>Redis</li><li>Kafka</li><li>SQS</li>
-      </ul>
+    <div class="skill-row">
+      <div class="skill-label">Data &amp; Messaging</div>
+      <div class="skill-list">PostgreSQL, DynamoDB, Redis, Kafka, SQS</div>
     </div>
 
-    <div class="skill-group">
-      <h3>Practices</h3>
-      <ul class="chips">
-        <li>Event-driven architecture</li><li>Golden-path templating</li><li>CI/CD migration</li><li>CODEOWNERS/ownership models</li><li>Security hardening</li>
-      </ul>
+    <div class="skill-row">
+      <div class="skill-label">Practices</div>
+      <div class="skill-list">Event-driven architecture, Golden-path templating, CI/CD migration, CODEOWNERS/ownership models, Security hardening</div>
     </div>
   </section>
 
   <section id="open-source" class="section">
     <h2>Open Source</h2>
-    <div class="card">
+    <div class="oss-item">
       <h3><a href="https://github.com/yashh1402/calenderEvent" target="_blank" rel="noopener">calendarEvent (npm)</a></h3>
       <p>TypeScript package for iCalendar integration — attach .ics invites to e-mails with a single function call.</p>
+      <a class="oss-link" href="https://github.com/yashh1402/calenderEvent" target="_blank" rel="noopener">github.com/yashh1402/calenderEvent</a>
     </div>
   </section>
 
@@ -197,30 +185,42 @@
   <section id="contact" class="section">
     <h2>Contact</h2>
     <p>Open to platform, backend and AI-infrastructure roles.</p>
-    <div class="actions">
-      <a class="btn" href="mailto:yashh.1402@gmail.com">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm15.4 2H4.6l7.4 6.2L19.4 6ZM4 8.3V18h16V8.3l-7.6 6.4a1 1 0 0 1-1.28 0L4 8.3Z"/></svg>
-        Email
-      </a>
-      <a class="btn" href="https://linkedin.com/in/yash-hemnani" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M6.94 8.5H3.56V20H6.94V8.5ZM5.25 7a1.95 1.95 0 1 0 0-3.9 1.95 1.95 0 0 0 0 3.9ZM20.44 20h-3.38v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V20H9.65V8.5h3.24v1.57h.05c.45-.86 1.56-1.77 3.21-1.77 3.43 0 4.06 2.26 4.06 5.2V20Z"/></svg>
-        LinkedIn
-      </a>
-      <a class="btn" href="https://github.com/yashh1402" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.4.1 2.65.65.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
-        GitHub
-      </a>
-      <a class="btn btn-primary" href="resume.pdf" download>
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1Zm-7 15a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z"/></svg>
-        Download Resume
-      </a>
-    </div>
+    <p class="text-links">
+      <a href="mailto:yashh.1402@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/yash-hemnani" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">&nearr;</span></a>
+      <a href="https://github.com/yashh1402" target="_blank" rel="noopener">GitHub <span aria-hidden="true">&nearr;</span></a>
+      <a href="resume.pdf" download>Download Resume <span aria-hidden="true">&darr;</span></a>
+    </p>
   </section>
 </main>
 
 <footer class="site-footer">
   <p>&copy; 2026 Yash Hemnani</p>
 </footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  var root = document.documentElement;
+  var current = null;
+  try { current = localStorage.getItem('theme'); } catch (e) {}
+  function label(){
+    btn.setAttribute('aria-label', 'Theme: ' + (current || 'system') + '. Click to change.');
+  }
+  label();
+  btn.addEventListener('click', function () {
+    var order = [null, 'light', 'dark'];
+    current = order[(order.indexOf(current) + 1) % order.length];
+    if (current) root.setAttribute('data-theme', current);
+    else root.removeAttribute('data-theme');
+    try {
+      if (current) localStorage.setItem('theme', current);
+      else localStorage.removeItem('theme');
+    } catch (e) {}
+    label();
+  });
+})();
+</script>
 
 </body>
 </html>
