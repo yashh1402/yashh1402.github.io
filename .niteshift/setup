@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Static HTML/CSS site served as-is by GitHub Pages: no dependencies or build step.
+# The preview is a plain python3 static server (see services.yaml), so setup only
+# confirms the interpreter is present.
+set -euo pipefail
+
+command -v python3 >/dev/null || { echo "python3 is required to serve the site" >&2; exit 1; }
